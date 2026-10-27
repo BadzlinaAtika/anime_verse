@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 // Import file screens & widgets milikmu
 import 'package:anime_verse/screens/signin_screen.dart';
 import 'package:anime_verse/screens/signup_screen.dart';
-import 'package:anime_verse/screens/detail_Screen.dart'; // Sesuaikan S besar/kecil dengan nama file kamu
+import 'package:anime_verse/screens/detail_screen.dart'; // Sesuaikan S besar/kecil dengan nama file kamu
 import 'package:anime_verse/screens/home_screen.dart';
 import 'package:anime_verse/screens/favorite_screen.dart';
 import 'package:anime_verse/screens/profile_screen.dart';
@@ -48,7 +48,7 @@ GoRouter createRouter() {
         parentNavigatorKey: _rootNavigatorKey,
         builder: (context, state) {
           final animeId = state.pathParameters['id'] ?? '';
-          return DetailScreen(); // Sesuaikan parameter jika DetailScreen butuh animeId
+          return DetailScreen(animeId : animeId); // Sesuaikan parameter jika DetailScreen butuh animeId
         },
       ),
 
